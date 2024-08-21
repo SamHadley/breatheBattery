@@ -3,6 +3,8 @@
 
 ## Running the Application
 
+Clone the repo onto your local machine, open terminal and cd to breatheBattery
+
 Ensure python3 is installed on your system
 
 Open terminal and type 
@@ -12,8 +14,6 @@ Open terminal and type
 If python is not installed then run
 
 ```brew install python3```
-
-Download zipfile, open terminal and cd to breatheBattery 
 
 Run the following lines of code in the terminal:
 
