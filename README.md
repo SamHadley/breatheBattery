@@ -1,7 +1,7 @@
 
-#PM 2.5 Data Analysis Application
+# PM 2.5 Data Analysis Application
 
-##Running the Application
+## Running the Application
 
 Ensure python3 is installed on your system
 
@@ -32,8 +32,3 @@ The application will run every ten seconds, to see if there's any new data from 
 
 It will also produce a .log file that gives insight into the how many records are getting added to the db etc
 
-
-
-
-
-# breatheBattery
