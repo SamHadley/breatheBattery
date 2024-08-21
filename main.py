@@ -47,17 +47,25 @@ logging.basicConfig(
 
 # Function to generate a report
 def generate_report(above_threshold, daily_stats):
+    # Convert above_threshold DataFrame to CSV format
+    above_threshold_csv = above_threshold.to_csv(index=True)
+
+    # Convert daily_stats DataFrame to CSV format
+    # Flatten MultiIndex columns for better CSV format
+    daily_stats.columns = ['_'.join(col).strip() for col in daily_stats.columns.values]
+    daily_stats_csv = daily_stats.to_csv(index=True)
+
+    # Combine the two CSV sections into one report
     report = "PM2.5 Report\n"
     report += "====================\n"
 
     report += "\nTimes when PM2.5 was above the danger threshold:\n"
-    for index, row in above_threshold.iterrows():
-        report += f"Time: {index}, PM2.5 Level: {row['pm25_value']}\n"
+    report += above_threshold_csv
 
     report += "\nDaily Statistics:\n"
-    report += daily_stats.to_string()
+    report += daily_stats_csv
 
-    # Save the report to a text file
+    # Save the report to a CSV file
     with open("pm25_report.csv", "w") as f:
         f.write(report)
 
