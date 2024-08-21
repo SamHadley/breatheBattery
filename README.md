@@ -25,6 +25,7 @@ Run the following lines of code in the terminal:
 
 ```python3 main.py```
 
+## Application Info
 
 The application will create a local sqlite3 db, write all the data from the /device/<device_id>/history/ endpoint and then produce a csv report that will show when the PM 2.5 level is over 30, along with daily max, min and average
 
